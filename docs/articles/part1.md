@@ -9,7 +9,7 @@ Containerizing the project will mainly help us with two aspects
 
 Assuming you have a Django project do the following things in order to get started
 
-## 1. Create Dockerfile
+## 1. Dockerfile
 
 ```docker
 FROM python:3.8
@@ -29,7 +29,7 @@ EXPOSE 8000
 CMD newrelic-admin run-program gunicorn --bind 0.0.0.0:$PORT --access-logfile - todo.wsgi:application
 ```
 
-## 2. Create a docker-compose file
+## 2. docker-compose file
 
 ```docker
 version: "3.4"
@@ -55,7 +55,7 @@ services:
       - postgres
 ```
 
-## 3. Local Development
+## 3. Local development
 
 Start the dev server for local development:
 
